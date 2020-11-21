@@ -35,7 +35,8 @@
           <a class="header-link-phone" href="tel:+380961111111">
             <svg class="phone-svg">
               <use href="./images/icon/icomoon/symbol-defs.svg#icon-phone"></use>
-          </svg>+38 096 111 11 11</a>
+            </svg>+38 096 111 11 11
+          </a>
         </address>
       </div>
     </header>
@@ -56,9 +57,60 @@
 
       <!-- Модалка -->
       <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button class="modal-close" data-modal-close></button>
-        </div>
+        <form class="modal" autocomplete="off">
+          <p>Оставьте свои данные, мы вам перезвоним</p>
+          <button class="modal-close" data-modal-close>
+            <svg class="modal-svg-close">
+              <use href="./images/symbol-defs-modal.svg#modal-close"></use>
+            </svg>
+          </button>
+          <div class="form-field">
+            <label class="form-margin" for="name">Имя</label>
+            <div class="modal-relative">
+              <input class="form-input" type="text" name="name" id="name">
+              <svg class="modal-svg">
+                <use href="./images/symbol-defs-modal.svg#modal-name"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-margin" for="tel">Телефон</label>
+            <div class="modal-relative">
+              <input class="form-input" type="tel" name="tel" id="tel">
+              <svg class="modal-svg">
+                <use href="./images/symbol-defs-modal.svg#modal-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-margin" for="mail">Почта</label>
+            <div class="modal-relative">
+              <input class="form-input" type="email" name="mail" id="mail">
+              <svg class="modal-svg">
+                <use href="./images/symbol-defs-modal.svg#modal-mail"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-margin" for="comment">Комментарий</label>
+            <textarea class="form-textarea" name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <label class="label-checkbox">
+              <input class="checkbox" type="checkbox" name="checkbox">
+              <span class="castom-checkbox"></span> Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="">Условия договора</a>
+            </label>
+          </div>
+          <div class="button-send">
+            <button class="modal-button">Отправить</button>
+          </div>
+
+         
+        </form>
 
       </div>
 
@@ -330,7 +382,7 @@
 
     <!-- Футер -->
     <footer>
-      <div class="container footer-flex">
+      <div class="container-footer footer-flex">
         <section>
           <a class="logo footer-logo" href="./index.html"
             ><span class="web">Web</span><span class="studio">Studio</span></a
@@ -377,8 +429,17 @@
             </li>
           </ul>
         </section>
+        <div class="subscription">
+          <h2 class="footer-title">Подпишитесь на рассылку</h2>
+          <input class="subscription-email" type="email" name="mail" placeholder="E-mail" autocomplete="off"/>
+          <button class="footer-button">Подписаться<svg class="send-fly-svg">
+              <use href="./images/symbol-defs-modal.svg#send-fly"></use>
+            </svg>
+          </button>
+        </div>
       </div>
+      
     </footer>
-    <script src="./js/modal.js"></script>
+    <script src="./modal.js"></script>
   </body>
 </html>
