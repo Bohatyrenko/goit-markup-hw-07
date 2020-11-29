@@ -103,6 +103,7 @@ input {
 }
 
 .logo {
+  margin-bottom: 24px;
   color: #212121;
   font-family: "Raleway", sans-serif;
   font-size: 26px;
